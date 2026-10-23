@@ -1,0 +1,25 @@
+{
+  "name": "web2-projekt1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && tsc && npm run copy-views",
+    "copy-views": "shx cp -r src/views/ dist",
+    "clean": "shx rm -rf dist",
+    "start": "node dist/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.2.1",
+    "express-openid-connect": "^3.4.0",
+    "pg": "^8.23.1",
+    "pug": "^3.0.4"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.23.1",
+    "shx": "^0.4.0",
+    "typescript": "^5.9.3"
+  }
+}

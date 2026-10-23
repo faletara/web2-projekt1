@@ -1,0 +1,16 @@
+doctype html
+html(lang='hr')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Digitalne propusnice
+  body
+    h1 Digitalne propusnice
+    p Ukupno propusnica: #{counts.total}
+    p Aktivnih propusnica: #{counts.active}
+    if loggedIn
+      a(href='/admin') Pregled propusnica
+      form(action='/logout', method='post')
+        button(type='submit') Odjava
+    else
+      a(href='/login') Prijava
