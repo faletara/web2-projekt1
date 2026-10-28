@@ -13,6 +13,7 @@ html(lang='hr')
       table
         thead
           tr
+            th ID
             th Ime i prezime
             th Dokument
             th Vrijeme izdavanja
@@ -21,6 +22,7 @@ html(lang='hr')
         tbody
           each pass in passes
             tr
+              td: a(href=`/info/${pass.id}`)= pass.id
               td= pass.name
               td= pass.document
               td= pass.issuedAt.toISOString()
